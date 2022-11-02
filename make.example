@@ -1,0 +1,55 @@
+#!/usr/bin/php
+
+<?php
+
+array_shift($argv);
+
+print_r($argv);
+
+return;
+
+$file = readline("What to make? \n");
+
+if(rtrim($file, "\n") === strtolower('controller')) {
+	$sub_dirs = explode('/', readline('Controller name: '));
+	$file_name = array_pop($sub_dirs);
+
+	if($file_name === '') {
+		echo "\e[91mYou need to enter controller name! \n";
+
+		return;
+	}
+
+	$full_path = 'app/Controllers/';
+
+	foreach($sub_dirs as $index => $dir) {
+		$full_path .= $dir.'/';
+	}
+
+	if(!file_exists($full_path)) {
+		mkdir($full_path, 0775, true);
+	}
+
+	$namespace = rtrim(ucfirst(str_replace('/', '\\', $full_path)), '\\');
+
+	$controler_content = <<<TEXT
+	<?php
+
+	namespace $namespace;
+
+	class $file_name {
+		public function __contruct() {
+			//
+		}
+	}
+	TEXT;
+
+	if(!file_exists($full_path.$file_name.'.php')) {	
+		file_put_contents($full_path.$file_name.'.php', $controler_content);
+		echo "\e[92mController created successfuly. \n";
+	} else {
+		echo "\e[91mController already exists! \n";
+	}	
+} else {
+	echo "\e[91mSorry, cannot make this. \n";
+}
