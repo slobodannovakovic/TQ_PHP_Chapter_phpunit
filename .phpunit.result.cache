@@ -1,1 +1,1 @@
-{"version":1,"defects":{"Tests\\ExampleTest::false_is_false":3,"Tests\\ExampleTest::string_contains_php":3},"times":{"Tests\\ExampleTest::true_is_true":0.002,"Tests\\ExampleTest::false_is_false":0,"Tests\\ExampleTest::string_contains_php":0.003}}
+{"version":1,"defects":{"Tests\\ExampleTest::false_is_false":3,"Tests\\ExampleTest::string_contains_php":3},"times":{"Tests\\ExampleTest::true_is_true":0.002,"Tests\\ExampleTest::false_is_false":0,"Tests\\ExampleTest::string_contains_php":0.002}}
