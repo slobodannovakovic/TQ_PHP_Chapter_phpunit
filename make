@@ -2,7 +2,7 @@
 <?php
 declare(strict_types=1);
 
-require_once './vendor/makefile/index.php';
+require_once './vendor/slobodannovakovic/clitool/index.php';
 
 array_shift($argv);
 
