@@ -1,12 +1,12 @@
-#Typeqast PHP Chapter - PHPUnit testing
+# Typeqast PHP Chapter - PHPUnit testing
 
 Basic testing examples with simple CLI tool for creating files.
 
-#Instalation
+# Instalation
 
 	composer install
 
-#CLI tool
+# CLI tool
 
 	php make model TestModel
 
